@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #faf7f0;
+  --color-champagne: #d6b779;
+  --color-gold: #b89556;
+  --color-rose: #e8c8c3;
+  --color-sage: #a8b5a0;
+  --color-ink: #302b27;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #faf7f0;
+  color: #302b27;
+  font-family: "Montserrat", sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
