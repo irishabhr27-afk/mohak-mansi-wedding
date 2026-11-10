@@ -8,6 +8,7 @@ const cors = require('cors')
 const helmet = require('helmet')
 const rateLimit = require('express-rate-limit')
 const rsvpRoutes = require('./routes/rsvpRoutes')
+const adminRoutes = require('./routes/adminRoutes')
 
 const app = express()
 
@@ -48,10 +49,26 @@ const apiLimiter = rateLimit({
   legacyHeaders: false,
 })
 
+// Protect admin login against brute-force attempts
+const adminLoginLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 5,
+  standardHeaders: 'draft-8',
+  legacyHeaders: false,
+  message: {
+    success: false,
+    message: 'Too many login attempts. Please try again after 15 minutes.',
+  },
+})
+
 app.use('/api', apiLimiter)
 
 // RSVP routes
 app.use('/api/rsvp', rsvpRoutes)
+
+// Admin authentication routes
+app.use('/api/admin/login', adminLoginLimiter)
+app.use('/api/admin', adminRoutes)
 
 // Health check
 app.get('/api/health', (req, res) => {
