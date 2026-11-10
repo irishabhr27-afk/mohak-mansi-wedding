@@ -88,12 +88,26 @@ app.use((err, req, res, next) => {
 })
 
 // Start server
-async function startServer() {
-  await connectDB()
 
-  app.listen(PORT, () => {
+async function connectDatabaseWithRetry() {
+  while (mongoose.connection.readyState !== 1) {
+    try {
+      await connectDB()
+      return
+    } catch (error) {
+      console.error('MongoDB connection failed:', error.message)
+      console.log('Retrying MongoDB connection in 10 seconds...')
+      await new Promise((resolve) => setTimeout(resolve, 10000))
+    }
+  }
+}
+
+function startServer() {
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`Wedding API running on port ${PORT}`)
   })
+
+  connectDatabaseWithRetry()
 }
 
 startServer()
