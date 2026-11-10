@@ -99,17 +99,22 @@ function RSVP() {
             required
           />
 
-          <label htmlFor="phone">Phone Number</label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            value={form.phone}
-            onChange={handleChange}
-            placeholder="Enter your phone number"
-            required
-          />
-
+         <label htmlFor="phone">Phone Number</label>
+<input
+  id="phone"
+  name="phone"
+  type="tel"
+  inputMode="tel"
+  autoComplete="tel"
+  value={form.phone}
+  onChange={handleChange}
+  placeholder="Enter your phone number"
+  minLength="7"
+  maxLength="20"
+  pattern="[+]?[0-9\s()-]{7,20}"
+  title="Enter a valid phone number"
+  required
+/>
           <label htmlFor="attendance">Will you attend?</label>
           <select
             id="attendance"

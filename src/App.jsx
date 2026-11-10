@@ -26,9 +26,9 @@ function App() {
             <div className="ornament">✳</div>
 
             <h1>
-              Mohak
-              <span className="ampersand">&</span>
               Mansi
+                <span className="ampersand">&</span>
+              Mohak
             </h1>
 
             <p className="hero-subtitle">
@@ -79,7 +79,7 @@ function App() {
           Some journeys begin with a beautiful moment.
           Ours is a story of love, laughter and forever.
         </p>
-        <div className="story-names">Mohak <span>&</span> Mansi</div>
+        <div className="story-names">Mansi <span>&</span> Mohak </div>
       </section>
 
       <section className="celebration" id="celebration">
@@ -92,7 +92,7 @@ function App() {
           <p>10 March 2027</p>
           <div className="gold-line" />
           <p className="event-location">
-            Tikratoli Farm Resorts and Banquet
+            Tikratoli Farm Resorts & Banquets
           </p>
           <a href="#venue" className="text-link">EXPLORE THE VENUE ↗</a>
         </div>
@@ -101,19 +101,30 @@ function App() {
       <section className="venue" id="venue">
         <p className="eyebrow">THE PLACE WHERE IT ALL BEGINS</p>
         <h2>Celebrate With Us</h2>
-        <p>Tikratoli Farm Resorts and Banquet</p>
-        <p className="venue-city">Ranchi, Jharkhand, India</p>
+        <p>Tikratoli Farm Resorts & Banquets</p>
+        <p className="venue-city">
+                Satish Chowk, Gumla Road, Tikratoli,
+                 Jharkhand 835303, India
+</p>
+<a
+  href="https://www.google.com/maps/search/?api=1&query=Tikratoli+Farm+Resorts+%26+Banquets%2C+Satish+Chowk%2C+Gumla+Road%2C+Tikratoli%2C+Jharkhand+835303"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-link"
+>
+  GET DIRECTIONS ↗
+</a>
       </section>
       
       <RSVP />
 <Gallery />
-
+<Events />
       <footer>
         <div className="footer-monogram">M <span>&</span> M</div>
-        <p>MOHAK & MANSI</p>
+        <p>MANSI & MOHAK</p>
         <span>A CELEBRATION OF FOREVER · 10.03.2027</span>
       </footer>
-      <Events />
+      
     </main>
   )
 }

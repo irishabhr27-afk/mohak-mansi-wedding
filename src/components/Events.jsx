@@ -1,37 +1,37 @@
 
 const events = [
   {
-    name: 'Mehendi',
-    subtitle: 'A celebration of colours',
-    date: 'To be announced',
-    time: 'Coming soon',
-    symbol: '❀',
-    description:
-      'An afternoon filled with beautiful henna, music and joyful moments.',
-  },
-  {
-    name: 'Haldi',
+    name: "Bride's Haldi",
     subtitle: 'A golden beginning',
-    date: 'To be announced',
-    time: 'Coming soon',
+    date: '8 March 2027',
+    time: '8:00 AM',
     symbol: '✧',
     description:
       'A beautiful tradition filled with blessings, laughter and sunshine.',
   },
   {
-    name: 'Sangeet',
-    subtitle: 'An evening of music',
-    date: 'To be announced',
-    time: 'Coming soon',
-    symbol: '♫',
+    name: 'Tilak Ceremony',
+    subtitle: 'A celebration of family and blessings',
+    date: '9 March 2027',
+    time: '10:00 AM',
+    symbol: '❀',
     description:
-      'An evening of dance, music and unforgettable celebrations.',
+      'A special gathering of families to celebrate the upcoming wedding.',
   },
   {
-    name: 'The Wedding',
+    name: 'Sangeet Ceremony',
+    subtitle: 'An evening of music',
+    date: '9 March 2027',
+    time: '5:00 PM',
+    symbol: '♫',
+    description:
+      'An evening of music, dance and unforgettable celebrations.',
+  },
+  {
+    name: 'Wedding Ceremony',
     subtitle: 'A promise of forever',
     date: '10 March 2027',
-    time: 'Time to be announced',
+    time: '9:00 AM onwards',
     symbol: '♡',
     description:
       'Join us as two hearts come together to begin a beautiful journey.',
@@ -39,8 +39,8 @@ const events = [
   {
     name: 'Reception',
     subtitle: 'An evening to remember',
-    date: 'To be announced',
-    time: 'Coming soon',
+    date: '10 March 2027',
+    time: '6:00 PM',
     symbol: '✦',
     description:
       'Celebrate love, happiness and the beginning of a new chapter.',

@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react'
 
-const WEDDING_DATE = new Date('2027-03-10T00:00:00').getTime()
+const WEDDING_DATE = new Date('2027-03-10T00:00:00+05:30').getTime()
 
 function getTimeLeft() {
   const difference = WEDDING_DATE - Date.now()
